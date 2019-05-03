@@ -7,7 +7,7 @@ connection = pika.BlockingConnection(pika.ConnectionParameters(host))
 channel = connection.channel()
 
 # make sure that the queue exists
-queue = 'task_queue_2'
+queue = 'task_queue'
 channel.queue_declare(queue=queue, durable=True)
 
 """ run callback function whenever a new message arrives
